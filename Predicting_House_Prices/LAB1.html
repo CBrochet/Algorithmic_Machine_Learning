@@ -11815,7 +11815,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="1.-Data">1. Data<a class="anchor-link" href="#1.-Data">&#182;</a></h1><p>Understanding data is one of the most important part when designing any machine learning algorithm. In this notebook, we will use a data set published by Audioscrobbler - a music recommendation system for last.fm. Audioscrobbler is also one of the first internet streaming radio sites, founded in 2002. It provided an open API for b scrobblingb , or recording listenersb  plays of artistsb  songs. last.fm used this information to build a powerful music recommender engine.</p>
+<h1 id="1.-Data">1. Data<a class="anchor-link" href="#1.-Data">&#182;</a></h1><p>Understanding data is one of the most important part when designing any machine learning algorithm. In this notebook, we will use a data set published by Audioscrobbler - a music recommendation system for last.fm. Audioscrobbler is also one of the first internet streaming radio sites, founded in 2002. It provided an open API for b�scrobblingb�, or recording listenersb� plays of artistsb� songs. last.fm used this information to build a powerful music recommender engine.</p>
 <h2 id="1.1.-Data-schema">1.1. Data schema<a class="anchor-link" href="#1.1.-Data-schema">&#182;</a></h2><p>Unlike a rating dataset which contains information about users' preference for products (one star, 3 stars, and so on), the datasets from Audioscrobbler only has information about events: specifically, it keeps track of how many times a user played songs of a given artist and the names of artists. That means it carries less information than a rating: in the literature, this is called explicit vs. implicit ratings.</p>
 <h3 id="Reading-material">Reading material<a class="anchor-link" href="#Reading-material">&#182;</a></h3><ul>
 <li><a href="http://people.csail.mit.edu/teevan/work/publications/papers/sigir-forum03.pdf">Implicit Feedback for Inferring User Preference: A Bibliography</a></li>
@@ -11824,7 +11824,7 @@ div#notebook {
 </ul>
 <p>The data we use in this Notebook is available in 3 files (these files are stored in our HDFS layer, in the directory  <code>/datasets/lastfm</code>):</p>
 <ul>
-<li><strong><code>user_artist_data.txt</code></strong>: It contains about 140,000+ unique users, and 1.6 million unique artists. About 24.2 million usersb  plays of artistsb  are recorded, along with their count. It has 3 columns separated by spaces: </li>
+<li><strong><code>user_artist_data.txt</code></strong>: It contains about 140,000+ unique users, and 1.6 million unique artists. About 24.2 million usersb� plays of artistsb� are recorded, along with their count. It has 3 columns separated by spaces: </li>
 </ul>
 <table>
 <thead><tr>
@@ -13727,7 +13727,7 @@ Plot the results
 <li><p>We might observe that the people who rated both <code>IT2</code> and <code>IT3</code> tended to give them similar ratings. Thus, we could conclude that user <code>U5</code> would also give <code>IT3</code> a low rating, similar to <code>U5</code>'s rating of <code>IT2</code></p>
 </li>
 </ul>
-<p>It is not necessary to predict every blank entry in a <code>utility matrix</code>. Rather, it is only necessary to discover some entries in each row that are likely to be high. In most applications, the recommendation system does not oo, er users a ranking of all items, but rather suggests a few that the user should value highly. It may not even be necessary to o,nd all items with the highest expected ratings, but only to o,nd a large subset of those with the highest ratings.</p>
+<p>It is not necessary to predict every blank entry in a <code>utility matrix</code>. Rather, it is only necessary to discover some entries in each row that are likely to be high. In most applications, the recommendation system does not oo,�er users a ranking of all items, but rather suggests a few that the user should value highly. It may not even be necessary to o,nd all items with the highest expected ratings, but only to o,nd a large subset of those with the highest ratings.</p>
 <h2 id="2.2-Families-of-recommender-systems">2.2 Families of recommender systems<a class="anchor-link" href="#2.2-Families-of-recommender-systems">&#182;</a></h2><p>In general, recommender systems can be categorized into two groups:</p>
 <ul>
 <li><p><strong>Content-Based</strong> systems focus on properties of items. Similarity of items is determined by measuring the similarity in their properties.</p>
@@ -13793,9 +13793,9 @@ $$</p>
 <p>With the initial iteration, we calculate the the Root-Mean-Square Error from $XY$ to $M$.</p>
 <p>Consider the o,rst rows of $M$ and $XY$ . We subtract the first row of $XY$ from the entries in the o,rst row of $M$, to get $3,0,2,2,1$. We square and sum these to get $18$.</p>
 <p>In the second row, we do the same to get $1,b1,0,2,b1$, square and sum to get $7$.</p>
-<p>In the third row, the second column is blank, so that entry is ignored when computing the RMSE. The dio, erences are $0,1,b1,2$ and the sum of squares is $6$.</p>
-<p>For the fourth row, the dio, erences are $0,3,2,1,3$ and the sum of squares is $23$.</p>
-<p>The o,fth row has a blank entry in the last column, so the dio, erences are $2,2,3,2$ and the sum of squares is $21$.</p>
+<p>In the third row, the second column is blank, so that entry is ignored when computing the RMSE. The dio,�erences are $0,1,b1,2$ and the sum of squares is $6$.</p>
+<p>For the fourth row, the dio,�erences are $0,3,2,1,3$ and the sum of squares is $23$.</p>
+<p>The o,fth row has a blank entry in the last column, so the dio,�erences are $2,2,3,2$ and the sum of squares is $21$.</p>
 <p>When we sum the sums from each of the o,ve rows, we get $18+7+6+23+21 = 75$. So, $RMSE=\sqrt{75/23}=1.806$ where $23$ is the number of non-empty values in $M$.</p>
 <p>Next, with the given value of $Y$, we calculate $X$ by finding the best value for $X_{11}$.</p>
 <p>$$
@@ -13874,7 +13874,7 @@ $$</p>
 <p>$$
 \min_{X,Y} \sum_{r_{ui} \text{observed}}(r_{ui} - x_{u}^{T}y_i)^2 + \lambda \left( \sum_{u} \|x_u\|^2 + \sum_{i} \|y_i\|^2 \right) 
 $$</p>
-<p>Notice that this objective is non-convex (because of the $x_{u}^{T} y_i$ term); in fact itb s NP-hard to optimize. Gradient descent can be used as an approximate approach here, however it turns out to be slow and costs lots of iterations. Note however, that if we fix the set of variables $X$ and treat them as constants, then the objective is a convex function of $Y$ and vice versa. Our approach will therefore be to fix $Y$ and optimize $X$, then fix $X$ and optimize $Y$, and repeat until convergence. This approach is known as <strong>ALS (Alternating Least Squares)</strong>. For our objective function, the alternating least squares algorithm can be expressed with this simple pseudo-code:</p>
+<p>Notice that this objective is non-convex (because of the $x_{u}^{T} y_i$ term); in fact itb�s NP-hard to optimize. Gradient descent can be used as an approximate approach here, however it turns out to be slow and costs lots of iterations. Note however, that if we fix the set of variables $X$ and treat them as constants, then the objective is a convex function of $Y$ and vice versa. Our approach will therefore be to fix $Y$ and optimize $X$, then fix $X$ and optimize $Y$, and repeat until convergence. This approach is known as <strong>ALS (Alternating Least Squares)</strong>. For our objective function, the alternating least squares algorithm can be expressed with this simple pseudo-code:</p>
 
 </div>
 </div>
@@ -13901,8 +13901,8 @@ $$</p>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For a single machine, we can analyze the computational cost of this algorithm. Updating each $x_u$ will cost $O(n_u k^2 + k^3)$, where $n_u$ is the number of items rated by user $u$, and similarly updating each $y_i$ will cost $O(n_i k^2 + k^3)$, where $n_i$ is the number of users that have rated item $i$.</p>
-<p>Once web ve computed the matrices $X$ and $Y$, there are several ways compute a prediction. The first is to do what was discussed before, which is to simply predict $ r_{ui} \approx x_{u}^{T}y_i$ for each user $u$ and item $i$. 
-This approach will cost $O(nmk)$ if web d like to estimate every user-item pair.</p>
+<p>Once web�ve computed the matrices $X$ and $Y$, there are several ways compute a prediction. The first is to do what was discussed before, which is to simply predict $ r_{ui} \approx x_{u}^{T}y_i$ for each user $u$ and item $i$. 
+This approach will cost $O(nmk)$ if web�d like to estimate every user-item pair.</p>
 <p>However, this approach is prohibitively expensive for most real-world datasets. A second (and more holistic) approach is to use the $x_u$ and $y_i$ as features in another learning algorithm, incorporating these features with others that are relevant to the prediction task.</p>
 
 </div>
@@ -13958,7 +13958,7 @@ This approach will cost $O(nmk)$ if web d like to estimate every user-item pair
 <p>Second, in the data, there are some users that have listened to only 1 artist. We need an algorithm that might provide decent recommendations to even these users. After all, at some point, every user starts out with just one play at some point!</p>
 <p>Third, we need an algorithm that scales, both in its ability to build large models, and to create recommendations quickly. So, an algorithm which can run on a distributed system (SPARK, Hadoop...) is very suitable.</p>
 <p>From these requirement, we can choose using ALS algorithm in SPARK's MLLIB.</p>
-<p>Spark MLlibb s ALS implementation draws on ideas from <a href="http://yifanhu.net/PUB/cf.pdf">1</a> and <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68880-8_32">2</a>.</p>
+<p>Spark MLlibb�s ALS implementation draws on ideas from <a href="http://yifanhu.net/PUB/cf.pdf">1</a> and <a href="http://link.springer.com/chapter/10.1007%2F978-3-540-68880-8_32">2</a>.</p>
 <h2 id="3.2-Notes">3.2 Notes<a class="anchor-link" href="#3.2-Notes">&#182;</a></h2><p>Currently, MLLIB can only build models from an RDD. That means we have two ways to prepare data:</p>
 <ul>
 <li><p>Loading to into SPARK SQL DataFrame as before, and then access the corresponding RDD by calling <code>&lt;dataframe&gt;.rdd</code>. The invalid data is often sucessfully dropped by using mode <code>DROPMALFORMED</code>. However, this way might not work in all cases. Fortunately, we can use it with this usecase.</p>
@@ -14922,7 +14922,7 @@ finish in 126.077492 seconds
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Question-9.3">Question 9.3<a class="anchor-link" href="#Question-9.3">&#182;</a></h4><div class="alert alert-info">
-Now we have the UAC of our model, itb s helpful to benchmark this against a simpler approach. For example, consider recommending the globally most-played artists to every user. This is not personalized, but is simple and may be effective.   
+Now we have the UAC of our model, itb�s helpful to benchmark this against a simpler approach. For example, consider recommending the globally most-played artists to every user. This is not personalized, but is simple and may be effective.   
 <ul></ul>
 Implement this simple pupolarity-based prediction algorithm, evaluate its AUC score, and compare to the results achieved by the more sophisticated ALS algorithm.
 </div>
