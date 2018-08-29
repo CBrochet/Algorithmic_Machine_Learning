@@ -1,7 +1,7 @@
 # Algorithmic_Machine_Learning
 
 ## Introduction
-This repository contains all the projects I did with Nino Filiu for the [Algorithmic Machine Learning Course](http://www.eurecom.fr/en/course/AML-2018Spring), (see [course repository](https://github.com/DistributedSystemsGroup/Algorithmic-Machine-Learning)) at EURECOM. The guiding thread of those projects are as follows:
+This repository contains all the projects I did with Nino Filiu for the [Algorithmic Machine Learning Course](http://www.eurecom.fr/en/course/AML-2018Spring), (see [course repository](https://github.com/DistributedSystemsGroup/Algorithmic-Machine-Learning)) at [EURECOM](http://www.eurecom.fr/fr). The guiding thread of those projects are as follows:
 
 1. Data cleeaning
 2. Data Analysis
