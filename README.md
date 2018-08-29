@@ -15,7 +15,7 @@ This repository contains all the projects I did with Nino Filiu for the [Algorit
 
 We used the EURECOM cloud computing platform to work on our Notebooks. Our cluster is managed by Zoe, which is a container-based analytics-as-a-service system that Eurecom has built. Notebooks front-end run in a user-facing container, whereas Notebooks kernel run in clusters of containers. For this course, we focus on Apache Spark kernel. All of our Notebooks are configured to use Spark Python API.
 
-##License
+## License
 
 MIT Free software
 
