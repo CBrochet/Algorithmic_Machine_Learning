@@ -10,6 +10,9 @@ This repository contains all the projects I did with Nino Filiu for the [Algorit
 
 ## Summary
 * [Building a music recommender system](https://github.com/CBrochet/Algorithmic_Machine_Learning/tree/master/Building_a_Music_Recommender_System)  - Matrix factorisation - ALS - Implicit
+* [Estimating Financial Risk through MonteCarlo Simulation](https://github.com/CBrochet/Algorithmic_Machine_Learning/blob/master/LAB2.html) - Monte Carlo simulation - Time series
+* [Predicting House Prices](https://github.com/CBrochet/Algorithmic_Machine_Learning/blob/master/challenge.html) - Prediction models - Cross-validation
+* Study of real aeronautical data from SAFRAN ([Part 1](https://github.com/CBrochet/Algorithmic_Machine_Learning/blob/master/Safran-part1.html) and [Part 2](https://github.com/CBrochet/Algorithmic_Machine_Learning/blob/master/Safran-part2.html) ) - Visualization - Prediction models
 
 ## Technical Aspects
 
